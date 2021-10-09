@@ -28,5 +28,5 @@ brew install chyroc/tap/lark-send-msg-cli
 - With Webhook
 
 ```shell
-lark-send-msg-cli --webhook "<webhook-url>" --secret "<secret>"
+lark-send-msg-cli --webhook "<webhook-url>" --secret "<secret>" --message "<message>"
 ```
