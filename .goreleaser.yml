@@ -9,7 +9,6 @@ builds:
       - linux
       - windows
       - darwin
-    main: ./cmd/incr
 archives:
   - replacements:
       darwin: Darwin
