@@ -30,3 +30,15 @@ brew install chyroc/tap/lark-send-msg-cli
 ```shell
 lark-send-msg-cli --webhook "<webhook-url>" --secret "<secret>" --message "<message>"
 ```
+
+If you send your message contains `\n`, but the message sent does not wrap, this may be because `\n` is escaped, you can add the `--wrap` parameter to reverse this situation
+
+```shell
+lark-send-msg-cli --webhook "<webhook-url>" --secret "<secret>" --message "msg1\nmsg2\n" --wrap
+```
+
+If you use this tool in GitHub action and other places, timeout may occur. You can add the `--timeout` parameter to specify the timeout period in seconds.
+
+```shell
+lark-send-msg-cli --webhook "<webhook-url>" --secret "<secret>" --message "<message>" --timeout 10
+```
