@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"time"
 
 	"github.com/chyroc/lark"
 	"github.com/urfave/cli/v2"
@@ -26,8 +27,14 @@ func runAction(c *cli.Context) error {
 	webhook := c.String("webhook")
 	secret := c.String("secret")
 	message := c.String("message")
+	timeout := c.Int64("timeout")
 
-	larkCli := lark.New(lark.WithCustomBot(webhook, secret))
+	opts := []lark.ClientOptionFunc{lark.WithCustomBot(webhook, secret)}
+	if timeout > 0 {
+		opts = append(opts, lark.WithTimeout(time.Second*time.Duration(timeout)))
+	}
+
+	larkCli := lark.New(opts...)
 
 	resp, response, err := larkCli.Message.Send().SendText(context.Background(), message)
 	if response != nil {
@@ -53,6 +60,10 @@ func appFlags() []cli.Flag {
 		&cli.StringFlag{
 			Name:  "secret",
 			Usage: "webhook secret or app_secret",
+		},
+		&cli.Int64Flag{
+			Name:  "timeout",
+			Usage: "timeout second for send lark request",
 		},
 		&cli.StringFlag{
 			Name:     "message",
