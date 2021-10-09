@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/chyroc/lark"
@@ -28,6 +29,10 @@ func runAction(c *cli.Context) error {
 	secret := c.String("secret")
 	message := c.String("message")
 	timeout := c.Int64("timeout")
+	wrap := c.Bool("wrap")
+	if wrap {
+		message = strings.ReplaceAll(message, "\\n", "\n")
+	}
 
 	opts := []lark.ClientOptionFunc{lark.WithCustomBot(webhook, secret)}
 	if timeout > 0 {
@@ -69,6 +74,10 @@ func appFlags() []cli.Flag {
 			Name:     "message",
 			Usage:    "send message",
 			Required: true,
+		},
+		&cli.BoolFlag{
+			Name:  "wrap",
+			Usage: "wrap \\n",
 		},
 	}
 }
