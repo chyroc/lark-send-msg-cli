@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/chyroc/lark v0.0.94
-	github.com/urfave/cli/v2 v2.5.0
+	github.com/urfave/cli/v2 v2.5.1
 )
 
 require (
