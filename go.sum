@@ -3,8 +3,8 @@ github.com/antzucaro/matchr v0.0.0-20210222213004-b04723ef80f0 h1:R/qAiUxFT3mNgQ
 github.com/antzucaro/matchr v0.0.0-20210222213004-b04723ef80f0/go.mod h1:v3ZDlfVAL1OrkKHbGSFFK60k0/7hruHPDq2XMs9Gu6U=
 github.com/chyroc/go-ptr v1.6.0 h1:4GwCNrNfk4806eQKbHO2A/N/YOLW6jHIrBPWKfMe6F0=
 github.com/chyroc/go-ptr v1.6.0/go.mod h1:FKNjNg3sCLx7VhQGwuml6sITX1mvhKS0Je9uN9tt65Q=
-github.com/chyroc/lark v0.0.94 h1:HROMvKUB8/xcFRe/lFH1vPJWzaUvVsetcAzDYuAGeuw=
-github.com/chyroc/lark v0.0.94/go.mod h1:Brd/ivv9Q1EFLFtsIRD6Q/AQ+MOcXvdErtV/pW5d3sc=
+github.com/chyroc/lark v0.0.95 h1:/5LCYQDbUlfNjFcSmQUnawcUKr7FZkKpMk1BnAK567g=
+github.com/chyroc/lark v0.0.95/go.mod h1:Brd/ivv9Q1EFLFtsIRD6Q/AQ+MOcXvdErtV/pW5d3sc=
 github.com/cpuguy83/go-md2man/v2 v2.0.1 h1:r/myEWzV9lfsM1tFLgDyu0atFtJ1fXn261LKYj/3DxU=
 github.com/cpuguy83/go-md2man/v2 v2.0.1/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
