@@ -3,7 +3,7 @@ module github.com/chyroc/lark-send-msg-cli
 go 1.17
 
 require (
-	github.com/chyroc/lark v0.0.106
+	github.com/chyroc/lark v0.0.108
 	github.com/urfave/cli/v2 v2.23.7
 )
 
